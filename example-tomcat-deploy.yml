@@ -61,4 +61,5 @@ spec:
         image: rvenigallaacrtest.azurecr.io/example-tomcat:latest
         ports:
           - containerPort: 8080        
-
+      imagePullSecrets:
+        - name: practiseacr
