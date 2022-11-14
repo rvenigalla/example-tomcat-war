@@ -49,3 +49,10 @@ spec:
           - containerPort: 8080        
       imagePullSecrets:
         - name: practiseacr
+        volumeMounts:
+          - mountPath: 
+            name: tomcat-logs-directory              
+      volumes:    
+        - name: tomcat-logs-directory
+          persistentVolumeClaim:
+            claimName: tomcat-logs-directory        
