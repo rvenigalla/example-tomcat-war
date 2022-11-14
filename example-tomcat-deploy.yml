@@ -46,12 +46,12 @@ spec:
       - name: example-tomcat
         image: rvenigallaacrtest.azurecr.io/example-tomcat:latest
         ports:
-          - containerPort: 8080        
-      imagePullSecrets:
-        - name: practiseacr
+          - containerPort: 8080 
         volumeMounts:
           - mountPath: 
-            name: tomcat-logs-directory              
+            name: tomcat-logs-directory            
+      imagePullSecrets:
+        - name: practiseacr            
       volumes:    
         - name: tomcat-logs-directory
           persistentVolumeClaim:
