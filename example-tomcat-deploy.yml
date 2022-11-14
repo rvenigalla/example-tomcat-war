@@ -48,7 +48,7 @@ spec:
         ports:
           - containerPort: 8080 
         volumeMounts:
-          - mountPath: 
+          - mountPath: /usr/local/tomcat/logs
             name: tomcat-logs-directory            
       imagePullSecrets:
         - name: practiseacr            
